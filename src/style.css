@@ -42,7 +42,7 @@ body {
     height: 80px;
 }
 
-.menu {
+.menu-bar {
     flex-grow: 1;
     text-align: center;
     display: grid;
