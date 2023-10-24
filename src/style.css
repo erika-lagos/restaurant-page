@@ -1,0 +1,71 @@
+/* Dark Zombie green: #395738; */
+/* Blood Red: #AA0000; */
+/* Bone white: #F0EDE5; */
+/* Zombie gray: #6C757D; */
+/* Haunting purple: #8B008B; */
+
+@font-face {
+    font-family: 'Averia';
+    src: url('./fonts/AveriaSansLibre-Regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nosifer';
+    src: url('./fonts/Nosifer-Regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    padding: 15px 35px;
+    background-color: #F0EDE5;
+    color: #AA0000;
+    font-family: 'Nosifer';
+    font-size: 24pt;
+}
+
+.logo {
+    height: 80px;
+}
+
+.header > div {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.main {
+    padding: 15vh 25vw;
+    background-color: black;
+    background-image: url("../src/images/background.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+}
+
+.main-content {
+    font-family: 'Averia';
+    font-size: 14pt;
+    padding: 30px 40px;
+    background-color: #F0EDE5;
+    opacity: 0.75;
+    height: fit-content;
+}
