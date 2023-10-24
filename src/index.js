@@ -11,6 +11,6 @@ function loadMainContent() {
     loadContent(mainContainer);
 }
 
-window.addEventListener('load', loadMainContent);
+// window.addEventListener('load', loadMainContent);
 
 
