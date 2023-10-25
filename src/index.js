@@ -5,18 +5,19 @@
 import Logo from './images/logo-1.png';
 import loadHome from './loadHome';
 import loadMenu from './loadMenu';
+import loadLocations from './loadLocations';
 import './common-styles.css';
-import './menu-style.css';
 
 const mainContainer = document.querySelector('#content');
 
 function loadMainContent() {
-    loadHeader(mainContainer);
+    // const body = document.getElementsByTagName('body');
+    loadHeader();
     loadHome(mainContainer);
     toggleTab('Home');
 }
 
-function loadHeader(containerNode) {
+function loadHeader() {
     const header = document.createElement('div');
     header.className = 'header';
     
@@ -30,7 +31,7 @@ function loadHeader(containerNode) {
     createMenuItems(menuBar, 'Home', 'Menu', 'Locations', 'Contact Us');
     header.appendChild(menuBar);
     
-    containerNode.appendChild(header);
+    document.body.insertBefore(header, mainContainer);
 }
 
 function createMenuItems(menuBar, ...names) {
@@ -57,26 +58,28 @@ function toggleTab(tabName) {
 
 function loadTab(tabName) {
     toggleTab(tabName);
-    clearTabContents();
+    mainContainer.innerHTML = '';
     if (tabName === 'Home') {
         loadHome(mainContainer);
     } else if (tabName === 'Menu') {
         loadMenu(mainContainer);
     } else if (tabName === 'Locations') {
-        loadLocations();
+        loadLocations(mainContainer);
     } else if (tabName === 'Contact Us') {
-        loadContact();
+        loadContact(mainContainer);
     }
 }
 
-function clearTabContents() {
-    const nodes = mainContainer.children;
-    for (let i = 0; i < nodes.length ; i++) {
-        if (!nodes[i].classList.contains('header')) {
-            mainContainer.removeChild(nodes[i]);
-        }
-    }
-}
+// function clearTabContents() {
+//     const nodes = mainContainer.children;
+//     console.log('-------------------------', nodes.length, nodes);
+//     for (let i = 0; i < nodes.length ; i++) {
+//         console.log(nodes[i], nodes[i].classList, i);
+//         if (!nodes[i].classList.contains('header')) {
+//             mainContainer.removeChild(nodes[i]);
+//         }
+//     }
+// }
 
 window.addEventListener('load', loadMainContent);
 

@@ -10,8 +10,6 @@ import Cookies from './images/cookies.jpg';
 import Fingers from './images/fingers.jpg';
 import Mousse from './images/mousse.jpg';
 
-
-
 class Dish {
 
     constructor(name, description, imgSrc) {
