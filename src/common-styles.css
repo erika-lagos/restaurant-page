@@ -30,6 +30,9 @@ body {
     padding: 15px 35px;
     background-color: #F0EDE5;
     height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0px;
 }
 
 .logo {

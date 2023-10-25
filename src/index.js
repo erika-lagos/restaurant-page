@@ -11,7 +11,6 @@ import './common-styles.css';
 const mainContainer = document.querySelector('#content');
 
 function loadMainContent() {
-    // const body = document.getElementsByTagName('body');
     loadHeader();
     loadHome(mainContainer);
     toggleTab('Home');
@@ -28,7 +27,7 @@ function loadHeader() {
     
     const menuBar = document.createElement('div');
     menuBar.className = 'menu-bar';
-    createMenuItems(menuBar, 'Home', 'Menu', 'Locations', 'Contact Us');
+    createMenuItems(menuBar, 'Home', 'Menu', 'Locations');
     header.appendChild(menuBar);
     
     document.body.insertBefore(header, mainContainer);
@@ -69,17 +68,6 @@ function loadTab(tabName) {
         loadContact(mainContainer);
     }
 }
-
-// function clearTabContents() {
-//     const nodes = mainContainer.children;
-//     console.log('-------------------------', nodes.length, nodes);
-//     for (let i = 0; i < nodes.length ; i++) {
-//         console.log(nodes[i], nodes[i].classList, i);
-//         if (!nodes[i].classList.contains('header')) {
-//             mainContainer.removeChild(nodes[i]);
-//         }
-//     }
-// }
 
 window.addEventListener('load', loadMainContent);
 
