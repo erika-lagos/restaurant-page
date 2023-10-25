@@ -1,0 +1,42 @@
+.category {
+    margin: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 90%;
+    color: black;
+    font-family: 'Nosifer';
+    font-size: 24pt;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: start;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.dish-card {
+    width: 220px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Averia';
+    font-size: 12pt;
+}
+
+.dish-name {
+    font-weight: bold;
+}
+
+.dish-desc {
+    color: rgb(85, 85, 85);
+}
+
+.dish-img {
+    height: 150px;
+    
+}

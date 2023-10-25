@@ -1,3 +1,6 @@
+import './home-style.css';
+import Background from './images/background.jpg';
+
 function loadHome(containerNode) {
     const main = document.createElement('div');
     main.className = 'main';

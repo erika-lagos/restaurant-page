@@ -4,6 +4,9 @@
 // Photo by <a href="https://unsplash.com/@toddquackenbush?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Todd Quackenbush</a> on <a href="https://unsplash.com/photos/black-mortar-and-pestle-beside-brown-box-in-top-view-photography-x5SRhkFajrA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 import Logo from './images/logo-1.png';
 import loadHome from './loadHome';
+import loadMenu from './loadMenu';
+import './common-styles.css';
+import './menu-style.css';
 
 const mainContainer = document.querySelector('#content');
 
@@ -54,8 +57,7 @@ function toggleTab(tabName) {
 
 function loadTab(tabName) {
     toggleTab(tabName);
-    const main = document.querySelector('.main');
-    mainContainer.removeChild(main);
+    clearTabContents();
     if (tabName === 'Home') {
         loadHome(mainContainer);
     } else if (tabName === 'Menu') {
@@ -64,6 +66,15 @@ function loadTab(tabName) {
         loadLocations();
     } else if (tabName === 'Contact Us') {
         loadContact();
+    }
+}
+
+function clearTabContents() {
+    const nodes = mainContainer.children;
+    for (let i = 0; i < nodes.length ; i++) {
+        if (!nodes[i].classList.contains('header')) {
+            mainContainer.removeChild(nodes[i]);
+        }
     }
 }
 
