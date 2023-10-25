@@ -1,6 +1,8 @@
 import './home-style.css';
 import Background from './images/background.jpg';
 
+// Photo by <a href="https://unsplash.com/@toddquackenbush?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Todd Quackenbush</a> on <a href="https://unsplash.com/photos/black-mortar-and-pestle-beside-brown-box-in-top-view-photography-x5SRhkFajrA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
 function loadHome(containerNode) {
     const main = document.createElement('div');
     main.className = 'main';
@@ -34,13 +36,7 @@ function loadHome(containerNode) {
     par6.textContent = 
     "After all, who says the afterlife can't be deliciously fun?";
     
-    mainContent.appendChild(par1);
-    mainContent.appendChild(par2);
-    mainContent.appendChild(par3);
-    mainContent.appendChild(par4);
-    mainContent.appendChild(par5);
-    mainContent.appendChild(par6);
-    
+    mainContent.append(par1,par2,par3,par4,par5,par6);
     main.appendChild(mainContent);
     containerNode.appendChild(main);
 }
